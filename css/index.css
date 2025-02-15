@@ -8,24 +8,39 @@ body {
   font-size: 0.9998rem;
   line-height: 1.5;
   color: #333;
+
 }
 
+.home-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-container{
+  max-width: 1200px;
+}
+
+.hero-2 img,
+.hero-3 img {
+  max-width: 100%;  /* Ensures image doesn't exceed container width */
+  max-height: 500px; /* Limits the height */
+  width: auto;       /* Maintains aspect ratio */
+  height: auto;      /* Maintains aspect ratio */
+  display: block;    /* Removes unwanted spacing below images */
+  margin: 0 auto;    /* Centers image if it's smaller than the container */
+}
 
 .main {
-  background-image: url('../images/hero/home-hero-1.jpg');
+  background-image: url('https://i.ibb.co/XR5QkMS/home-hero-1.jpg') !important;
   background-position: center;
   background-size: cover;
-  background-repeat:inherit;
+  background-repeat: no-repeat;
   height: 50rem;
   padding: 0;
   margin: 0;
-  top: 0; 
-  left: 0; 
-	
-  /* Preserve aspet ratio */
-  min-width: 100%;
-  min-height: 100%;
 }
+
 
 /* Adjust the layout of the hero sections */
 
