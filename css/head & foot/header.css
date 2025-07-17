@@ -2,22 +2,26 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 nav {
   padding: 1rem;
+  width: 100%;
 }
 
 header {
- font-size: small;
-
-
- padding-top: 1rem;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- width: 100%;
+  font-size: small;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 header img {
@@ -30,24 +34,39 @@ header img {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap; /* allows wrapping */
   justify-content: center;
+  align-items: center;
   font-size: 1rem;
+  max-width: 100%;
+  width: 100%;
 }
 
 .nav_links li {
-  margin: 0 9.9968px;
+  margin: 0 10px;
+  white-space: nowrap; /* prevent ugly line breaks inside text */
 }
 
 .nav_links li a {
   color: #333;
   text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav_links li a:hover {
   color: #000;
   font-weight: bold;
   text-decoration: underline;
+  transform: translateY(-2px);
 }
+
+
+.nav_links li a:hover {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* Insert tablet styles here */
